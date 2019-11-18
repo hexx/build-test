@@ -3,9 +3,10 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        echo 'hogeika'
+        script {
+          def image = docker.build("build-test:0.0.0")
+        }
       }
     }
-
   }
 }
