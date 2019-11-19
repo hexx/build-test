@@ -1,7 +1,7 @@
 pipeline {
   environment {
     gcrAccessToken = 'ya29.ImexB5Zcog6R_vdSNN2mg1pE60MJMbfk57Jx4zzmnO8XWwjbGTrBJV3uR1FZkv65K9rYP6vOaHo4ZLXp0NdLiDfVYIVblshKK-r_1IGdQpGb7DhJTNA73TSWo5yu0jANlQteDA18lXWw'
-    imageName = '/cicd-test-259105/' + 'build-test:0.0.2'
+    imageName = 'cicd-test-259105/' + 'build-test:0.0.2'
     image = ''
   }
   agent any
