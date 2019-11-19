@@ -16,7 +16,7 @@ pipeline {
     stage('push') {
       steps {
         script {
-          docker.withRegistry('https://gcr.io', 'gcr-credential-id') {
+          docker.withRegistry('https://gcr.io/cicd-test-259105', 'gcr-credential-id') {
            image.push()
           }
         }
