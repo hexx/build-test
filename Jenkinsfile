@@ -16,7 +16,7 @@ pipeline {
     stage('test') {
       steps {
         script {
-          image.withRun {
+          image.inside {
             sh 'bundle exec ruby -I . test.rb'
           }
         }
