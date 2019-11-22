@@ -1,7 +1,7 @@
 pipeline {
   environment {
     imageTag = "${env.TAG_NAME == null ? "latest" : env.TAG_NAME}"
-    imageName = "cicd-test-259105/' + 'build-test:$imageTag"
+    imageName = 'cicd-test-259105/' + "build-test:$imageTag"
     image = ''
   }
   agent any
