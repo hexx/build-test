@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    imageName = 'cicd-test-259105/' + 'build-test:0.0.3'
+    imageName = 'cicd-test-259105/' + 'build-test:$TAG_NAME'
     image = ''
   }
   agent any
@@ -15,6 +15,9 @@ pipeline {
     stage('push') {
       when {
         branch 'master'
+      }
+      when {
+        tag '*.*.*'
       }
       steps {
         script {
