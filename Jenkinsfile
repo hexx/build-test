@@ -1,6 +1,7 @@
 pipeline {
   environment {
-    imageName = 'cicd-test-259105/' + 'build-test:$TAG_NAME'
+    imageTag = "${env.TAG_NAME == null ? "latest" : env.TAG_NAME}"
+    imageName = "cicd-test-259105/' + 'build-test:$TAG_NAME"
     image = ''
   }
   agent any
