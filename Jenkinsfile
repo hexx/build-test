@@ -15,10 +15,7 @@ pipeline {
     }
     stage('push') {
       when {
-        allOf {
-          branch 'master'
-          tag '*.*.*'
-        }
+        tag '*.*.*'
       }
       steps {
         script {
