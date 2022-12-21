@@ -13,6 +13,15 @@ pipeline {
         }
       }
     }
+    stage('test') {
+      steps {
+        script {
+          image.inside {
+            sh 'bundle exec ruby -I . test.rb'
+          }
+        }
+      }
+    }
     stage('push') {
       when {
         tag '*.*.*'
